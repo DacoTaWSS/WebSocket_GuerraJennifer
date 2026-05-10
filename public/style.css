@@ -1,0 +1,66 @@
+body{
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+h1{
+    margin-bottom: 15px;
+    color: #333;
+}
+#usernameInput{
+    padding: 10px;
+    width: 250px;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+#timerDisplay{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 20px;
+    color: #555;
+}
+#seatsContainer{
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+button#buyButton{
+
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+button#buyButton:hover{
+    background-color: #0056b3;
+}
+
+.seat{
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
+    border-radius: 8px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.seat.reserved{
+    background-color: yellow;
+}
+
+.seat.sold{
+    background-color: red;
+    color: white;
+}

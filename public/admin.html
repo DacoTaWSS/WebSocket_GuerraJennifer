@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Reserva de asientos</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <h1>Panel de Administrador</h1>
+    <p class="subtitle">Vista global del estado de asientos</p>
+
+    <div id="stats">
+        <div class="stat-card disponible">
+            <div class="number" id="countAvailable">0</div>
+            <div class="label">Disponibles</div>
+        </div>
+        <div class="stat-card reservado">
+            <div class="number" id="countReserved">0</div>
+            <div class="label">Reservados</div>
+        </div>
+        <div class="stat-card vendido">
+            <div class="number" id="countSold">0</div>
+            <div class="label">Vendidos</div>
+        </div>
+    </div>
+
+    <div class="legend">
+        <div class="legend-item"><div class="legend-dot dot-available"></div> Disponible</div>
+        <div class="legend-item"><div class="legend-dot dot-reserved"></div> Reservado</div>
+        <div class="legend-item"><div class="legend-dot dot-sold"></div> Vendido</div>
+    </div>
+
+    <div id="seatsContainer"></div>
+
+    <div class="actions">
+        <button id="btnLiberarReservados">Liberar reservados</button>
+        <button id="btnResetear">Resetear todo</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

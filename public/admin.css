@@ -1,0 +1,144 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 30px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+h1 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+/* Estadísticas */
+#stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 16px 28px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    min-width: 110px;
+}
+
+.stat-card .number {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.stat-card .label {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+}
+
+.stat-card.disponible .number { color: #4caf50; }
+.stat-card.reservado .number  { color: #f0c000; }
+.stat-card.vendido .number    { color: #e53935; }
+
+/* Grid de asientos */
+#seatsContainer {
+    display: grid;
+    grid-template-columns: repeat(10, 52px);
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.seat {
+    width: 52px;
+    height: 52px;
+    background-color: #eee;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: default;
+}
+
+.seat.reserved { 
+    background-color: #ffe600; 
+    color: #333; 
+}
+.seat.sold{ 
+    background-color: #e53935; 
+    color: white; 
+}
+
+/* Botones */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 11px 22px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Segoe UI', sans-serif;
+    transition: background-color 0.2s ease;
+}
+
+#btnLiberarReservados {
+    background-color: #f0c000;
+    color: #333;
+}
+#btnLiberarReservados:hover { background-color: #d4a900; }
+
+#btnResetear {
+    background-color: #e53935;
+    color: white;
+}
+#btnResetear:hover { background-color: #b71c1c; }
+
+/* Leyenda */
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.dot-available {
+    background-color: #eee; 
+    border: 1px solid #ccc; 
+}
+.dot-reserved { 
+    background-color: #ffe600; 
+}
+
+.dot-sold{ 
+    background-color: #e53935; 
+}
